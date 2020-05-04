@@ -1,0 +1,18 @@
+---
+# tasks file for macos
+
+- name: Install brew packages
+  homebrew:
+    name: "{{ macos_brew_packages }}"
+    state: present
+
+- name: Install brew casks
+  homebrew_cask:
+    name: "{{ macos_brew_casks }}"
+    state: present
+
+- name: Install gems
+  become: true
+  gem:
+    name: "{{ macos_gems }}"
+    state: present

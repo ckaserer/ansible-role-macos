@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  role_name: macos
+  author: ckaserer
+  description: configure a new macbook from scratch
+  license: GPLv3
+
+  min_ansible_version: 2.9
+
+  platforms:
+    - name: macos
+      versions:
+        - catalina
+
+  galaxy_tags: []
+dependencies:
+  - { role: geerlingguy.mas, mas_installed_apps: "{{ macos_mas_apps }}" }
+...

@@ -1,0 +1,71 @@
+---
+# defaults file for macos
+
+macos_mas_apps:
+  - { id: 937984704, name: "amphetamine" }
+  - { id: 406580224, name: "blotter" }
+  - { id: 499340368, name: "coda" }
+  - { id: 411643860, name: "daisydisk" }
+  - { id: 409183694, name: "keynote" }
+  - { id: 1295203466, name: "microsoft remote desktop" }
+  - { id: 409203825, name: "numbers" }
+  - { id: 409201541, name: "pages" }
+  - { id: 585829637, name: "todoist" }
+  - { id: 577085396, name: "unclutter" }
+
+macos_brew_packages:
+  - ansible-lint
+  - awscli
+  - bash-completion
+  - git
+  - helm
+  - jq
+  - k6
+  - kubectl
+  - openshift-cli
+  - mas
+  - molecule
+  - pygments
+  - terraform
+  - tree
+  - watch
+  - yamllint
+
+macos_brew_casks:
+  - bartender
+  - bibdesk
+  - dashlane
+  - docker
+  - docker-compose
+  - evernote
+  - fing
+  - firefox
+  - google-backup-and-sync
+  - google-chat
+  - google-chrome
+  - google-drive-file-stream
+  - grammarly
+  - istat-menus
+  - iterm2
+  - keka
+  # - little-snitch
+  - macdown
+  - mactex
+  - postman
+  - slack
+  - skype
+  - telegra
+  - texpad
+  - tunnelblick
+  - vagrant
+  - vagrant-manager
+  - virtualbox-extension-pack
+  - visual-studio-code
+  - vlc
+  - whatsapp
+  # - yubico-authenticator
+  - zoomus
+
+macos_gems:
+  - macinbox
+...
