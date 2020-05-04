@@ -17,6 +17,7 @@ macos_brew_packages:
   - ansible-lint
   - awscli
   - bash-completion
+  - docker-compose
   - git
   - helm
   - jq
@@ -36,7 +37,6 @@ macos_brew_casks:
   - bibdesk
   - dashlane
   - docker
-  - docker-compose
   - evernote
   - fing
   - firefox
