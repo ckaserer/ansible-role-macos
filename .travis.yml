@@ -19,7 +19,7 @@ notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
 
 install:
-  - pip install molecule
+  - pip install molecule ansible-lint
       
 script:
 - mv ../ansible-role-macos ../ckaserer.macos
