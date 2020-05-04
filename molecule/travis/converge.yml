@@ -1,0 +1,6 @@
+---
+- name: Converge
+  hosts: all
+  roles:
+    - { role: ckaserer.macos, macos_mas_apps: [] }
+...
