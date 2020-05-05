@@ -54,7 +54,7 @@ macos_brew_casks:
   - postman
   - slack
   - skype
-  - telegra
+  - telegram
   - texpad
   - tunnelblick
   - vagrant
