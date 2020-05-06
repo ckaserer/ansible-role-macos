@@ -59,7 +59,7 @@ macos_brew_casks:
   - tunnelblick
   - vagrant
   - vagrant-manager
-  - virtualbox-extension-pack
+  # - virtualbox-extension-pack
   - visual-studio-code
   - vlc
   - whatsapp
