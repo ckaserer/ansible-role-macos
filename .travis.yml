@@ -1,7 +1,7 @@
 ---
 version: "~> 1.0"
 os: osx
-language: shell
+osx_image: xcode12
 
 notifications:
   email:
@@ -25,4 +25,5 @@ script:
 - mv ../ansible-role-macos ../ckaserer.macos
 - printf '[defaults]\nroles_path=../' >ansible.cfg
 - while true; do printf " "; sleep 10; done &
+- ./bootstrap.sh
 - molecule test --scenario-name travis
