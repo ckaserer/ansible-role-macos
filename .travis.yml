@@ -2,6 +2,7 @@
 version: "~> 1.0"
 os: osx
 osx_image: xcode12
+language: shell
 
 notifications:
   email:
@@ -19,7 +20,7 @@ notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
 
 install:
-  - pip install molecule ansible-lint
+  - pip3 install -r requirements.txt
       
 script:
 - mv ../ansible-role-macos ../ckaserer.macos
