@@ -16,19 +16,23 @@ macos_mas_apps:
 macos_brew_packages:
   - ansible-lint
   - awscli
+  - azure-cli
   - bash-completion
   - docker-compose
   - git
+  - gnu-tar
   - helm
   - jq
   - k6
   - kubectl
+  - kubeadm
   - openshift-cli
   - mas
   - molecule
   - pygments
   - terraform
   - tree
+  - unixodbc
   - watch
   - yamllint
 
@@ -37,9 +41,11 @@ macos_brew_casks:
   - bibdesk
   - dashlane
   - docker
+  - drawio
   - evernote
   - fing
   - firefox
+  - gimp
   - google-backup-and-sync
   - google-chat
   - google-chrome
@@ -52,6 +58,8 @@ macos_brew_casks:
   - macdown
   - mactex
   - postman
+  - python3
+  - signal
   - slack
   - skype
   - telegram
@@ -63,9 +71,14 @@ macos_brew_casks:
   - visual-studio-code
   - vlc
   - whatsapp
+  - xquartz
   # - yubico-authenticator
   - zoomus
 
 macos_gems:
   - macinbox
+
+# todo:
+macos_pip:
+  - virtualenv
 ...

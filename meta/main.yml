@@ -13,6 +13,8 @@ galaxy_info:
         - catalina
 
   galaxy_tags: []
+
 dependencies:
   - { role: geerlingguy.mas, mas_installed_apps: "{{ macos_mas_apps }}" }
+  - { role: ckaserer.bashrc }
 ...
