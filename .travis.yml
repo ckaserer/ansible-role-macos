@@ -1,30 +1,26 @@
----
 version: "~> 1.0"
 os: osx
 osx_image: xcode12
 language: shell
-
 notifications:
   email:
     on_success: never
     on_failure: never
   slack:
     rooms:
-      secure: "tTC3O33XDH0uNhlfLJw5684EuhmhC+mbNyveIqmSVHzUatteSiCohub7qrlfSIUwNFNKx3RL6iCUMymBTRh4NnX9+h9bVvaldA13enGwoV6OexPuXHsAK98YQw1gvInaih+d2971qYP6igOPNSkSI4xMrEKKBZSddGXBMciBANWnStDjycpr/ocHuy60ZlUJI5HLOL/gerEl7UuATCWzNlpKoAPAZexNnXAZedgFleyhVHDa5TEKuwKUdIflzU91VJW8y9a3056m1u3BYZf7leqPLV/IwsbnDqcTdkLcbp4QU/IQrB+UT2NVXPyx76pBgP6bXw0oWQylKZ3itDDpLTSga85DmXRQu9GDPdPHNvcZS8q1QwsdzVhPw1GWMGB9CtfcqA1PXRsvldlN06DKhoUj/aGIX4MXHkaE6kCjP3tYZY+8Dmdanpj86qZg0pGJQgXwHEKT/6R8FLc3FjN7UqIgBmV3cWGDf4MSmSBiEkDsIuEAvTMHR7lEeb9gwvelhuzNQrzBhOr8jYeB2uTRqpsozGC+A3GkMwOTMw75hvMRsbjrHyTSGAdbKl+BOc5yywlF/B/hZkCU2PSuSuio0bWaqA8DSeAZ04CiTJpPX1yxA7Kp1OM0Ob8wC1JQonEvqQja6+cap0mQDwi/qZ0dF6QvQW41nMhxpv/y7/5r/q4="
+      secure: FkveFgQobxirQFMGm7F5vuIzbfoZRwlxSrFZP9xiHI8RBBze1h2KPE+5uL2jIMbXynPFSScTZYGcseWO7h/CFPOr07AumEGMTyPrhrtV/lFWvjOTdsCct5K/fQcjs3QN2aVNHhk+AWpPwADFczNkttX7FJsdEPYTK7N6Y4Jnu0GWsZxHgtLTB755CRgRiZod9YIOiqH9Dp7E9Kpds9mFS1vT056YWXaL1M3rJw0l0vxSIKrQ66JSIpmxy7Ia5KEXor0DG/mA66r7cbF6yHJuWPzzJVuu5VGraopTFNdbzgYhB/u2hyNX9OX2B/LeG7AfaWpn4AA/DxqvO3bTcnpWnIdT+oJtcdtnFd2ILRJ0vQwRn2JDPserNkAjPEKdtQbl6uR5fnZpyG3XQDyvazyr42q7kX8K5dHWw9mVj5wJ+0/vGhPRkuR9jEitw3HBEpIQEoWVOxwdSy+HlRASwOYBVHbdnRpb0557lGL0+LwaqkNK+ta1kovEWVW98K91NIF08o+wWDRUSrNmomTwxIbN7mc0dcaN5zuNVcr4PTLAMN9IvNUutVmeB1puE3BAmiZH3kERwilr+N3nFe6t6SGPbH3cpH7TCpPd8nxPCrc0HjP91BfOmU5uDi1fEF/vKs/TPRclJnVEGjf37KH2Vn6IZQq+bBAp2OqrJBeeovHU5J4=
     template:
       - "%{commit_subject}"
-      - "build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) @%{branch}"
-      - "by %{author} %{result} in %{duration}"
+      - build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) @%{branch}
+      - by %{author} %{result} in %{duration}
     on_success: never
     on_failure: always
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
-
 install:
   - pip3 install -r requirements.txt
-      
 script:
-- mv ../ansible-role-macos ../ckaserer.macos
-- printf '[defaults]\nroles_path=../' >ansible.cfg
-- while true; do printf " "; sleep 10; done &
-- ./bootstrap.sh
-- molecule test --scenario-name travis
+  - mv ../ansible-role-macos ../ckaserer.macos
+  - printf '[defaults]\nroles_path=../' >ansible.cfg
+  - while true; do printf " "; sleep 10; done &
+  - "./bootstrap.sh"
+  - molecule test --scenario-name travis
