@@ -2,5 +2,11 @@
 - name: Converge
   hosts: all
   roles:
-    - { role: ckaserer.macos, macos_mas_apps: [] }
+    - name: "Include ansible role"
+      include_role:
+        name: "ckaserer.macos"
+      vars:
+        github_user: "ckaserer"
+        github_token: "{{ lookup('env','GITHUB_TOKEN') }}"
+        macos_mas_apps: []
 ...
