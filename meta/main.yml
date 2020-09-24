@@ -16,5 +16,5 @@ galaxy_info:
 
 dependencies:
   - { role: geerlingguy.mas, mas_installed_apps: "{{ macos_mas_apps }}" }
-  - { role: ckaserer.bashrc }
+  - { role: ckaserer.bashrc, github_token: "{{ github_token }}" }
 ...

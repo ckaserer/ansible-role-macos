@@ -81,4 +81,6 @@ macos_gems:
 # todo:
 macos_pip:
   - virtualenv
+
+github_token: lookup('env','GITHUB_TOKEN')
 ...
